@@ -5,20 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/19fef2f852.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li class="nav-item nav-item1">Roys Peak Farmhouse</li>
-            <li class="nav-item nav-item2"><a href="#">Explore</a></li>
-            <li class="nav-item nav-item3"><a href="#">About</a></li>
-            <li class="nav-item btn nav-item4"><a href="#">Book Now</a></li>
-        </ul>
-    </nav>
+    <div class="navbar">
+        <div class="navbar-wrapper">
+            <nav role="navigation" class="nav-menu">
+                <div class="navbar-bars"><i class="fa fa-bars"></i></div>
+                    <div class="navbar-menu-wrapper">
+                    <div class="navbar-menu-item navbar-x"><i class="fa fa-x"></i></div>
+                    <div class="navbar-menu-item">Explore</div>
+                    <div class="navbar-menu-item">About</div>
+                    <div class="navbar-menu-item menu-btn">
+                        <a href="https://www.airbnb.com" target="_blank" class="btn-primary small">Book now</a>
+                    </div>
+                </div>
+                <div class="navbar-background"></div>
+            </nav>
+        </div>
+    </div>
     <section class="section-a">
         <div>
             <h1>Roys Peak Farmhouse</h1>
@@ -28,14 +38,17 @@
         </div>
     </section>
     <section class="section-b">
-        <h3>The Hibernation Pods</h3>
-        <ul>
-            <li class="item">Pristine Views</li>
-            <li class="item">Fully Heated</li>
-            <li class="item">Comfortable</li>
-            <li class="item">Quiet</li>
-        </ul>
-        <div>
+        <div class="content-grid">
+            <h3>One of a kind experience</h3>
+            <ul>
+                <li class="item">Luxury Accommodation</li>
+                <li class="item">Lake Views</li>
+                <li class="item">Outdoor Hot Tub</li>
+                <li class="item">Sauna</li>
+                <li class="item">Bike Trails</li>
+            </ul>
+        </div>
+        <div class="image-grid">
             <img src="Imgs/Bed.webp" class="image" alt="Bedroom number one">
             <img src="Imgs/Bed2.webp" class="image" alt="Bedroom number two">
             <img src="Imgs/Bed3.webp" class="image" alt="Bedroom number three">
@@ -51,5 +64,23 @@
             <p>Set at the end of a winding gravel road, the farmhouse is surrounded by tussocks. The single level dwelling opens onto a wrap around deck, connecting with a schist flagstone patio featuring al-fresco sitting and dining areas. The hot tub nestles into the patio with jaw dropping views across the lake while you can ease weary legs from a day adventuring in the hills.</p>
         </div>
     </section>
+    <script>
+        function show_menu() {
+            $(".nav-menu").removeClass("hide-menu").addClass("show-menu")
+        }
+        
+        function hide_menu() {
+            $(".nav-menu").removeClass("show-menu").addClass("hide-menu")
+        }
+        
+        function setup_menu() {
+            $(".fa-bars").on("click", show_menu)
+            $(".fa-x").on("click", hide_menu)
+            $(".navbar-background").on("click", hide_menu)
+        }
+        
+        $(document).ready(setup_menu())
+        
+        </script>
 </body>
 </html>
