@@ -4,31 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Roys Peak Farmhouse - Home</title>
+    <!--The website gets jquery and font awesome item-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/19fef2f852.js" crossorigin="anonymous"></script>
+    <!--Links to the css file and google fonts-->
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!--navbar-->
     <div class="navbar">
         <div class="navbar-wrapper">
-            <nav role="navigation" class="nav-menu">
+            <!--Has the role for sliding out when on phone screen-->
+            <nav class="nav-menu">
+                <!--Burger image for triggering sliding animation on phone screen-->
                 <div class="navbar-bars"><i class="fa fa-bars"></i></div>
                     <div class="navbar-menu-wrapper">
+                    <!--The X button for closing sliding menu-->
                     <div class="navbar-menu-item navbar-x"><i class="fa fa-x"></i></div>
+                    <!--The items in the navba displayed to the user-->
+                    <div class="navbar-menu-item">
+                        <a href="index.html">Home</a>
+                    </div>
                     <div class="navbar-menu-item">Explore</div>
                     <div class="navbar-menu-item">About</div>
                     <div class="navbar-menu-item menu-btn">
                         <a href="https://www.airbnb.com" target="_blank" class="btn-primary small">Book now</a>
                     </div>
                 </div>
+                <!--The translucent area on the right of the navbar for asthetic omprovements and functionality-->
                 <div class="navbar-background"></div>
             </nav>
         </div>
     </div>
+    <!--The landing image and text (The first thing the user sees)-->
     <section class="section-a">
         <div>
             <h1>Roys Peak Farmhouse</h1>
@@ -37,48 +49,58 @@
             <a href="#" class="btn">Explore</a>
         </div>
     </section>
+    <!--The list and image grid-->
     <section class="section-b">
         <div class="content-grid">
-            <h3>One of a kind experience</h3>
+            <h2>One of a kind experience</h2>
+            <p>Reconnect with nature and reinvigorate the soul:</p>
             <ul>
-                <li class="item">Luxury Accommodation</li>
+                <!--The list-->
                 <li class="item">Lake Views</li>
+                <li class="item">Mountain Views</li>
                 <li class="item">Outdoor Hot Tub</li>
                 <li class="item">Sauna</li>
                 <li class="item">Bike Trails</li>
+                <li class="item">Snow Resorts</li>
             </ul>
         </div>
+        <!--Image Grid-->
         <div class="image-grid">
             <img src="Imgs/Bed.webp" class="image" alt="Bedroom number one">
-            <img src="Imgs/Bed2.webp" class="image" alt="Bedroom number two">
-            <img src="Imgs/Bed3.webp" class="image" alt="Bedroom number three">
-            <img src="Imgs/Bed4.webp" class="image" alt="Bedroom number four">
+            <img src="Imgs/Lake-View.webp" class="image" alt="Lake Wanaka">
+            <img src="Imgs/Outdoor-tub.webp" class="image" alt="Outdoor hot tub">
+            <img src="Imgs/Sauna.webp" class="image" alt="Sauna">
         </div>
     </section>
+    <!--blurb section of the page-->
     <section class="section-c">
         <img src="Imgs/Outside.webp" alt="">
         <div>
-            <h3>Roys Peak Farmhouse</h3>
-            <p>Find yourself at home in the stunning landscapes of the Queenstown Lakes. This architecturally designed luxury vacation rental near Wanaka was completed in 2022. A certified Passive House the compact property looks out over the beautiful lake Wanaka and surrounding snow-capped mountains.</p>
-            <p>Occupying a prime spot on this 50 acre lakeside farm, use the spacious private grounds and four bedrooms as the setting for a quiet family reunion or simply as a base to explore the regions ski resorts, renowned hikes and world-famous vineyards.</p>
-            <p>Set at the end of a winding gravel road, the farmhouse is surrounded by tussocks. The single level dwelling opens onto a wrap around deck, connecting with a schist flagstone patio featuring al-fresco sitting and dining areas. The hot tub nestles into the patio with jaw dropping views across the lake while you can ease weary legs from a day adventuring in the hills.</p>
+            <h2>Your accommodation</h2>
+            <p>This architecturaly designed luxury vacation rental near Wanaka was completed in 2022. A certified Passive House the property looks out over beautiful Lake Wanaka and surrounding snow-capped mountains.</p>
+            <p>Surrounded by tussocks at the end of a winding gravel road, this single level dwelling opens onto a wrap around deck, connecting with a schist flagstone patio featuring al-fresco sitting and dining areas.  The hot tub nestles into the patio with jaw drropping views across the lake while you can ease weary legs from a day of adventuring in the hills.</p>
         </div>
     </section>
     <script>
+        /*Defines the show nmenu function where the nav menu will slide out*/
         function show_menu() {
+            /*Removes the hide menu class and adds the show menu class  so the nav menu then slides out*/
             $(".nav-menu").removeClass("hide-menu").addClass("show-menu")
         }
         
         function hide_menu() {
+            /*Removes the show menu class and adds the hide menu class so the menu then slides back in*/
             $(".nav-menu").removeClass("show-menu").addClass("hide-menu")
         }
         
+        /*Sets up the menu*/
         function setup_menu() {
             $(".fa-bars").on("click", show_menu)
             $(".fa-x").on("click", hide_menu)
             $(".navbar-background").on("click", hide_menu)
         }
         
+        /*When the page has loaded the menu gets set up*/
         $(document).ready(setup_menu())
         
         </script>

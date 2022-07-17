@@ -1,28 +1,46 @@
 * {
+    /*removes default margin and padding*/
     margin: 0;
     padding: 0;
     font-family: 'Yanone Kaffeesatz', sans-serif;
 }
 
 :root {
+    /*Variables*/
     --hero-color: #FF3F3F;
     --menu-left-offset: -300px;
---menu-width: 300px;
+    --menu-width: 300px;
 }
 
+/*General styling for elements*/
 p {
     opacity: 120%;
+    line-height: 1.667em;
+    font-size: 20px;
+}
+ul{
+    font-size: 20px;
+    line-height: 1.667em;
+}
+
+h2 {
+    font-size: 60px;
+    color: black;
+    margin-bottom: 30px;
 }
 
 body {
 margin: 0px;
 padding: 0px;
 background-color: #f1f1f1;
+font-size: 18px;
 
 }
+/*Navbar displayed to the user*/
 .navbar {
 background-color: #ffffff;
 min-height: 18px;
+padding: 0px 30px;
 }
 .navbar-wrapper {
 display: flex;
@@ -39,6 +57,8 @@ margin-left: auto;
     justify-content: space-between;
     align-items: center;
 }
+
+/*Styling for all items in the navbar*/
 .navbar-menu-item {
     display: inline-block;
     position: relative;
@@ -49,17 +69,30 @@ margin-left: auto;
     color: var(--hero-color);
 }
 
-.btn-primary {
+.navbar-menu-item  a {
+    color: var(--hero-color);
+    text-decoration: none;
+}
+
+/*The primary button*/
+a.btn-primary {
     padding: 26px 38px;
     justify-content: center;
-    border-radius: 96px;
-    background-color: #ff3f3f;
+    border-radius: 48px;
+    background-color: var(--hero-color);
     color: #ffffff;
     line-height: 20px;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
+    display: inline-block;
 }
+
+/*Primary button hover effects*/
+.btn-primary:hover {
+    background-color: #e91a1a;
+}
+
 
 .btn-primary.small {
     padding: 18px 24px;
@@ -68,12 +101,13 @@ margin-left: auto;
     line-height: 18px;
 }
 
-
+/*Hides the X button*/
 .navbar-bars,
 .navbar-x {
 display: none;
 }
 
+/*Sliding navbar*/
 .navbar-background {
 position: absolute;
 z-index: 50;
@@ -85,20 +119,6 @@ background-color: #000000;
 opacity: 0.8;
 display: none;
 }   
-
-.btn-primary{
-    color: white;
-    background-color: var(--hero-color);
-    text-decoration: none;
-    padding: 26px 38px;
-    display: inline-block;
-    border-radius: 48px;
-    font-size: 18px;
-}
-
-.btn-primary:hover {
-    background-color: #e91a1a;
-}
 
 .btn {
     color: black;
@@ -115,6 +135,11 @@ display: none;
     color: white;
 }
 
+section{
+    padding: 0px 50px;
+}
+
+/*Styling for the background image*/
 .section-a {
     background-image: url(Imgs/Landing-Image-2.jpg);
     background-repeat: no-repeat;
@@ -128,7 +153,6 @@ display: none;
     position: relative;
     top: 180px;
     width: 40%;
-    margin: 0 50px;
 }
 
 h1 {
@@ -143,7 +167,6 @@ h1 {
     color: white;
     font-size: 20px;
     margin: 0;
-    line-height: 1.667em;
 }
 
 .section-a .btn {
@@ -157,31 +180,28 @@ h1 {
     margin-bottom: 20px;
 }
 
+/*Dislpays the middle section of the page as a grid so when the page resizes the content can shift*/
 .section-b {
-    margin-top: 30px;
+    margin-top: 150px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 125px 1fr;
 }
 
+/*Grid with text*/
 .section-b div.content-grid {
     grid-column-start: 1;
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 3;
-}
-
-.section-b h3 {
-    font-size: 60px;
-    color: black;
+    padding-right: 50px;
 }
 
 .section-b ul {
-    font-size: 40px;
-    color: black;
     margin-left: 30px;
 }
 
+/*Grrid with images*/
 .section-b div.image-grid {
     grid-column-start: 4;
     grid-column-end: 7;
@@ -197,18 +217,21 @@ h1 {
     width: 100%;
 }
 
+/*Blurb Section*/
 .section-c {
-    margin-top: 80px;
+    margin-top: 150px;
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
 }
 
+/*Tells where the image and text are in the grid*/
 .section-c div{
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row-start: 1;
     grid-row-end: 2;
+    padding-left: 50px;
 }
 
 .section-c img {
@@ -217,12 +240,6 @@ h1 {
     grid-row-start: 1;
     grid-row-end: 2;
     width: 100%;
-}
-
-.section-c div h3 {
-    font-size: 60px;
-    color: black;
-    margin-left: 30px;
 }
 
 .section-c div p {
@@ -236,10 +253,13 @@ h1 {
     /* tablets */
     
     }
-    
+
 @media screen and (max-width: 767px) {
 /* phones etc */
 
+.navbar{
+padding: 0 5px;
+}
 .nav-menu {
 margin: 15px;
 }
@@ -273,6 +293,7 @@ transition: 0.3s;
 left: var(--menu-left-offset);
 }
 
+/*Displays as block so the items are displayed vertically*/
 .navbar-menu-item {
 display: block;
 }
@@ -296,6 +317,12 @@ padding: 15px;
 .show-menu .navbar-background {
 display: block;
 }
+
+/*Shrinks content to fit page better*/
+h2 {
+    font-size: 40px;
+}
+
 .section-a div {
     width: auto;
     text-align: center;
@@ -320,24 +347,30 @@ display: block;
 
 .section-b {
     grid-template-columns: 50% 50%;
-    grid-template-rows: 1fr 100px 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top: 100px;
 }
 
+.section-b ul{
+    margin-bottom: 30px;
+}
+
+.section-b div.content-grid {
+    padding-right: 0px;
+}
+
+/*Changes where the content is in the grrid*/
 .section-b div.image-grid {
     grid-row-start: 3;
     grid-row-end: 4;
     grid-column-start: 1;
     grid-column-end: 3;
 }
-.section-c div h3 {
-    font-size: 40px;
-}
 
 .section-c{
-    text-align: center;
-    margin-top: 15px;
     grid-template-columns: 100%;
-    grid-template-rows: 33% 31% 33%;
+    grid-template-rows: 2fr;
+    margin-top: 100px;
 }
 
 .section-c img {
@@ -353,5 +386,6 @@ display: block;
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 2;
+    padding-left: 0px;
 }
 }
