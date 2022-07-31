@@ -14,7 +14,7 @@
 
 /*General styling for elements*/
 p {
-    opacity: 120%;
+    opacity: 1;
     line-height: 1.667em;
     font-size: 20px;
 }
@@ -148,6 +148,13 @@ section{
     background-position: center center;
 }
 
+.explore .section-a {
+    /*Smaller background image for explore page*/
+    height: 70vh;
+    background-image: url(Imgs/House\ Front.webp);
+    background-position: center -300px;
+}
+
 .section-a div {
     border-radius: 30px;
     position: relative;
@@ -178,6 +185,32 @@ h1 {
 .section-a .btn-primary {
     margin-top: 20px;
     margin-bottom: 20px;
+}
+
+/*Styling for the about section on the explore page*/
+.explore .contents {
+    display: flex;
+    margin-bottom: 30px;
+}
+
+.explore .contents div {
+    display: flex;
+    border: 1px solid lightgray;
+    padding: 5px 2px;
+    margin: 0 10px;
+    margin-bottom: 30px;
+    border-radius: 40px;
+    font-size: 20px;
+}
+
+.explore .contents div i {
+    padding-top: 4px;
+    padding-right: 5px;
+    padding-left: 15px;
+}
+
+.explore .contents div p {
+    padding-right: 15px;
 }
 
 /*Dislpays the middle section of the page as a grid so when the page resizes the content can shift*/
@@ -234,6 +267,31 @@ h1 {
     padding-left: 50px;
 }
 
+/*Styling for the amenities section*/
+.explore .amenities-2 .column-2 {
+    display: flex;
+}
+
+.explore .amenities .column-1 {
+    display: flex;
+}
+
+.explore .amenities-2 i {
+    /*The padding top lines the icons up with the text*/
+    padding-right: 20px;
+    padding-top: 6px;
+}
+
+.explore .amenities i {
+    padding-right: 20px;
+    padding-top: 6px;
+}
+
+.about-text {
+    /*Adds whitespace for cleaner look*/
+    margin-bottom: 15px;
+}
+
 .section-c img {
     grid-column-start: 1;
     grid-column-end: 1;
@@ -247,6 +305,86 @@ h1 {
     margin-left: 30px;
     color: black;
     margin: 15px 0;
+}
+
+.gallery-heading {
+    margin-left: 50px;
+    margin-top: 80px;
+}
+
+
+/*Styling for image grid*/
+.section-d {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-template-rows: 50% 50%;
+    grid-gap: 10px;
+    margin: 0 50px;
+    margin-bottom: 10px;
+}
+
+/*Setting the images to fill the grid and I added a border radius for cleaner effect*/
+.section-d img {
+    width: 100%;
+    border-radius: 24px;
+}
+
+/*Styling so the widget can be on the right side of the page at full screen but be below the amenities when on phone screen*/
+.section-e .container {
+    display: grid;
+    grid-template-columns: 6fr 3.5fr;
+    grid-gap: 15px;
+    margin-top: 80px;
+}
+
+.section-e .container .container-2 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.amenities-wrapper {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 80px 100%;
+    padding-top: 80px;
+}
+
+.amenities-wrapper h2 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.section-e .container .container-3 {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+/*Styling for the widget*/
+.section-e .container .widget {
+    position: -webkit-sticky;
+    background-color: white;
+    position: sticky;
+    top: 10px;
+    margin-top: -380px;
+    padding: 48px 40px;
+    border-radius: 24px;
+    box-shadow: 0 2px 12px 0 rgb(20 20 43 / 8%);
+}
+
+/*Styling for text inside of the widget*/
+.section-e .container .widget h3 {
+    font-size: 40px;
+    margin-bottom: 32px;
+}
+
+.section-e .container .widget p {
+    font-size: 30px;
+}
+
+.section-e .container .widget .btn-primary {
+    margin-top: 32px;
+    margin-bottom: 0px;
+    display: block;
 }
 
 @media screen and (max-width: 991px) {
@@ -323,6 +461,11 @@ h2 {
     font-size: 40px;
 }
 
+/*Changed the position of the background when on phone view*/
+.explore .section-a {
+    background-position: center left;
+}
+
 .section-a div {
     width: auto;
     text-align: center;
@@ -342,6 +485,11 @@ h2 {
 }
 .section-a .btn-primary{
     margin-left: 0;
+    display: block;
+}
+
+/*Makes each part of the amount of beds ect take the full width of the screen and have one on each line of the page*/
+.explore .contents {
     display: block;
 }
 
@@ -387,5 +535,33 @@ h2 {
     grid-column-start: 1;
     grid-column-end: 2;
     padding-left: 0px;
+}
+
+/*Styling for when the page is on phone view so the widget is underneath the amenities section*/
+.amenities-wrapper {
+    margin-bottom: 100px;
+}
+
+.section-d {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(7, 194px);
+}
+
+.section-e .container {
+    grid-template-columns: 100%;
+}
+
+.section-e .container .container-3 {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.explore .contents div {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.section-e .container-3 {
+    margin-top: 380px;
 }
 }

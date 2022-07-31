@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--The website gets jquery and font awesome item-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/19fef2f852.js" crossorigin="anonymous"></script>
+    <!--Links to the css file and google fonts-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <title>Roys Peak Farmhouse - Explore</title>
+</head>
+<body class="explore">
+    <!--navbar-->
+    <div class="navbar">
+        <div class="navbar-wrapper">
+            <!--Has the role for sliding out when on phone screen-->
+            <nav class="nav-menu">
+                <!--Burger image for triggering sliding animation on phone screen-->
+                <div class="navbar-bars"><i class="fa fa-bars"></i></div>
+                    <div class="navbar-menu-wrapper">
+                    <!--The X button for closing sliding menu-->
+                    <div class="navbar-menu-item navbar-x"><i class="fa fa-x"></i></div>
+                    <!--The items in the navba displayed to the user-->
+                    <div class="navbar-menu-item">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="navbar-menu-item"><a href="explore.html">Explore</a></div>
+                    <div class="navbar-menu-item">About</div>
+                    <div class="navbar-menu-item menu-btn">
+                        <a href="https://www.airbnb.com" target="_blank" class="btn-primary small">Book now</a>
+                    </div>
+                </div>
+                <!--The translucent area on the right of the navbar for asthetic omprovements and functionality-->
+                <div class="navbar-background"></div>
+            </nav>
+        </div>
+    </div>
+    <section class="section-a">
+        <div>
+            <!--Title and text on landing image-->
+            <h1>Roys Peak Farmhouse</h1>
+            <p>Enjoy jaw dropping views of lake Wanaka and the surrounding snow-capped mountains.</p>
+        </div>
+    </section>
+    <!--Containers for the grid with content and sticky widget-->
+    <section class="section-e">
+        <div class="container">
+            <div class="container-2">
+                <div>
+                    <!--Contents (About and Amenities)-->
+                    <div class="contents">
+                        <div>
+                            <i class="fa-solid fa-user"></i>
+                            <p>10 Guests</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-bed"></i>
+                            <p>4 Bedrooms</p>
+                        </div>
+                        <div>
+                            <i class="fa-solid fa-bath"></i>
+                            <p>3 Bathrooms</p>
+                        </div>
+                    </div>
+                    <h2>About</h2>
+                    <p class="about-text">Find yourself at home in the stunning landscapes of the Queenstown Lakes. This architecturally designed luxury vacation rental near Wanaka was completed in 2022. A certified Passive House the compact property looks out over the beautiful Lake Wanaka and surrounding snow-capped mountains.</p>
+                    <p>Occupying a prime spot on this 50 acre lakeside farm, use the spacious private grounds and four bedrooms as the setting for a quiet family reunion or simply as a base to explore the reigon's ski resorts, renowned hikes and world-famous vineyards.</p>    
+                </div>
+                <div class="amenities-wrapper">
+                    <h2>Amenities</h2>
+                    <div class="amenities">
+                        <!--Each div is a icon and the corresponding words-->
+                        <div class="column-1">
+                            <i class="fa-solid fa-water"></i>
+                            <p>Lake Views</p>
+                        </div>
+                        <div class="column-1">
+                            <i class="fa-solid fa-wifi"></i>
+                            <p>Wifi</p>
+                        </div>
+                        <div class="column-1">
+                            <i class="fa-solid fa-tv"></i>
+                            <p>Smart TV</p>
+                        </div>
+                        <div class="column-1">
+                            <i class="fa-solid fa-wind"></i>
+                            <p>Air Conditioning</p>
+                        </div>
+                    </div>
+                    <div class="amenities-2">
+                        <div class="column-2">
+                            <i class="fa-solid fa-mountain"></i>
+                            <p>Mountain Views</p>
+                        </div>
+                        <div class="column-2">
+                            <i class="fa-solid fa-bowl-food"></i>
+                            <p>Kitchen</p>
+                        </div>
+                        <div class="column-2">
+                            <i class="fa-solid fa-hot-tub-person"></i>
+                            <p>Hot Tub</p>
+                        </div>
+                        <div class="column-2">
+                            <i class="fa-solid fa-car-battery"></i>
+                            <p>EV Charger</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--The sticky widget-->
+            <div class="container-3">
+                <div class="widget">
+                    <h3>Reserve</h3>
+                    <p>From</p>
+                    <p>$2,850 / Night</p>
+                    <a href="http://www.airbnb.com" target="_blank" class="btn-primary">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--Gallery at the bottom of the page-->
+    <h2 class="gallery-heading">Gallery</h2>
+    <div class="section-d">
+        <img src="Imgs/Gallery/Bed-Room.webp" alt="bed room">
+        <img src="Imgs/Gallery/Bed.webp" alt="Queen bed">
+        <img src="Imgs/Gallery/Bunk-Beds.webp" alt="Bunk beds">
+        <img src="Imgs/Gallery/Dining.webp" alt="Dining table">
+        <img src="Imgs/Gallery/Hot-Tub.webp" alt="Oudoor Hot tub">
+        <img src="Imgs/Gallery/Inside-Sauna.webp" alt="Inside of Sauna">
+        <img src="Imgs/Gallery/Oven.webp" alt="Kitchen Oven">
+        <img src="Imgs/Gallery/Sink.webp" alt="Bathroom Sink">
+    </div>
+    <script>
+        /*Defines the shown menu function where the nav menu will slide out*/
+        function show_menu() {
+            /*Removes the hide menu class and adds the show menu class  so the nav menu then slides out*/
+            $(".nav-menu").removeClass("hide-menu").addClass("show-menu")
+        }
+        
+        function hide_menu() {
+            /*Removes the show menu class and adds the hide menu class so the menu then slides back in*/
+            $(".nav-menu").removeClass("show-menu").addClass("hide-menu")
+        }
+        
+        /*Sets up the menu*/
+        function setup_menu() {
+            $(".fa-bars").on("click", show_menu)
+            $(".fa-x").on("click", hide_menu)
+            $(".navbar-background").on("click", hide_menu)
+        }
+        
+        /*When the page has loaded the menu gets set up*/
+        $(document).ready(setup_menu())
+        
+        </script>
+</body>
+</html>
