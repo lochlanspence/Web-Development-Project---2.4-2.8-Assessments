@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Roys Peak Farmhouse - About</title>
+        <!--The website gets jquery and font awesome item-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://kit.fontawesome.com/19fef2f852.js" crossorigin="anonymous"></script>
+        <!--Links to the css file and google fonts-->
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    </head>
+<body class="about">
+    <!--navbar-->
+    <div class="navbar">
+        <div class="navbar-wrapper">
+            <!--Has the role for sliding out when on phone screen-->
+            <nav class="nav-menu">
+                <!--Burger image for triggering sliding animation on phone screen-->
+                <div class="navbar-bars"><i class="fa fa-bars"></i></div>
+                    <div class="navbar-menu-wrapper">
+                    <!--The X button for closing sliding menu-->
+                    <div class="navbar-menu-item navbar-x"><i class="fa fa-x"></i></div>
+                    <!--The items in the navba displayed to the user-->
+                    <div class="navbar-menu-item">
+                        <a href="index.html">Home</a>
+                    </div>
+                    <div class="navbar-menu-item"><a href="explore.html">Explore</a></div>
+                    <div class="navbar-menu-item"><a href="about.html">About</a></div>
+                    <div class="navbar-menu-item menu-btn">
+                        <a href="https://www.airbnb.com" target="_blank" class="btn-primary small">Book Now</a>
+                    </div>
+                </div>
+                <!--The translucent area on the right of the navbar for asthetic improvements and functionality-->
+                <div class="navbar-background"></div>
+            </nav>
+        </div>
+    </div>
+    <section class="section-a">
+        <div>
+            <h1>About our Cottage</h1>
+            <a href="#your-host" class="angle-down"><i class="fa-solid fa-angle-down"></i></a>
+        </div>
+    </section>
+    <section class="section-b">
+        <div class="content-grid">
+            <h2 id="your-host">Your Host</h2>
+            <div>
+                <img src="Imgs/Your-host.jpg" alt="Your host">
+                <p>Hi, I'm Gavin <br>Wanaka is my favourite place to visit, relax, and reconnect with nature. With some of the most stunning natural landscapes on your doorstep, nature welcomes you with open arms. Depending on the season amazing hiking, cycling, skiing, and swimming awaits. We can't wait to welcome you to our paradise!</p>
+            </div>
+        </div>
+        <div class="map-grid">
+            <h2>Our Location</h2>
+            <img src="Imgs/Map.png" alt="House location on the map">
+            <p>Maps Data: Google, ©2022 CNES / Astrium, Maxar Technologies</p>
+        </div>
+    </section>
+    <div class="your-host-imgs">
+        <div class="Img-1"></div>
+        <img src="Imgs/Your-Host-Gallery/Mountain.webp" alt="" class="Img-2">
+        <img src="Imgs/Your-Host-Gallery/Ruby's-Island.jpeg" alt="" class="Img-3">
+        <img src="Imgs/Your-Host-Gallery/TV.webp" alt="" class="Img-4">
+    </div>
+
+
+
+
+
+
+
+
+    <script>
+        /*Defines the shown menu function where the nav menu will slide out*/
+        function show_menu() {
+            /*Removes the hide menu class and adds the show menu class  so the nav menu then slides out*/
+            $(".nav-menu").removeClass("hide-menu").addClass("show-menu")
+        }
+        
+        function hide_menu() {
+            /*Removes the show menu class and adds the hide menu class so the menu then slides back in*/
+            $(".nav-menu").removeClass("show-menu").addClass("hide-menu")
+        }
+        
+        /*Sets up the menu*/
+        function setup_menu() {
+            $(".fa-bars").on("click", show_menu)
+            $(".fa-x").on("click", hide_menu)
+            $(".navbar-background").on("click", hide_menu)
+        }
+        
+        /*When the page has loaded the menu gets set up*/
+        $(document).ready(setup_menu())
+        
+        </script>
+</body>
+</html>
