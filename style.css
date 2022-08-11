@@ -312,6 +312,7 @@ h1 {
 
 .image {
     width: 100%;
+    border-radius: 24px;
 }
 
 /*Blurb Section*/
@@ -320,6 +321,7 @@ h1 {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 1fr;
+    margin-bottom: 10px;
 }
 
 /*Tells where the image and text are in the grid*/
@@ -359,6 +361,7 @@ h1 {
 .section-c img {
     grid-column-start: 1;
     grid-column-end: 1;
+    border-radius: 24px;
     grid-row-start: 1;
     grid-row-end: 2;
     width: 100%;
