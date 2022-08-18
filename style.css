@@ -225,7 +225,7 @@ h1 {
     display: flex;
     border: 1px solid lightgray;
     padding: 5px 2px;
-    margin: 0 10px;
+    margin-right: 20px;
     margin-bottom: 30px;
     border-radius: 40px;
     font-size: 20px;
