@@ -98,8 +98,10 @@ a.btn-primary {
 }
 
 /*Primary button hover effects*/
-.btn-primary:hover {
+a.btn-primary:hover {
     background-color: #e91a1a;
+    transform: scale(1.1);
+    color: white;
 }
 
 
