@@ -47,19 +47,18 @@ min-height: 18px;
 padding: 0px 30px;
 }
 .navbar-wrapper {
-display: flex;
 margin-right: auto;
 margin-left: auto;
 }
 
 .nav-menu {
-    display: flex;
     justify-content: space-between;
 }
 
 .navbar-menu-wrapper {
     justify-content: space-between;
     align-items: center;
+    display: flex;
 }
 
 /*Styling for all items in the navbar*/
@@ -67,8 +66,6 @@ margin-left: auto;
     display: inline-block;
     position: relative;
     text-align: left;
-    margin-left: auto;
-    margin-right: auto;
     padding: 20px;
     color: black;
 }
@@ -81,6 +78,10 @@ margin-left: auto;
 .navbar-menu-item  a:hover {
     color: var(--hero-color);
     text-decoration: none;
+}
+
+.menu-btn {
+    margin-left: auto;
 }
 
 /*The primary button*/
@@ -533,9 +534,11 @@ padding: 0 5px;
 }
 .nav-menu {
 margin: 15px;
+display: flex;
 }
 .navbar-wrapper {
 padding-left: 0px;
+display: flex;
 }
 .navbar-bars {
 display: block;
@@ -543,6 +546,7 @@ display: block;
 
 .navbar-menu-wrapper {
 position: absolute;
+display: block;
 /* position menu wrapper off screen, will use 'transition' to slide the menu in and out of view */
 left: var(--menu-left-offset);
 width: var(--menu-width);
