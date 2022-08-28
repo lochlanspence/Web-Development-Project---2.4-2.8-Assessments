@@ -162,9 +162,9 @@ section{
 
 .explore .section-a {
     /*Smaller background image for explore page*/
-    height: 70vh;
     background-image: url(Imgs/House\ Front.webp);
-    background-position: center -300px;
+    background-position: center center;
+    max-height: 550px;
 }
 
 .section-a div {
@@ -707,8 +707,7 @@ h2 {
 }
 
 .section-d {
-    grid-template-columns: 100%;
-    grid-template-rows: repeat(7, 194px);
+    display: block;
 }
 
 .section-e .container {
@@ -740,4 +739,10 @@ h2 {
 .Img-1 {
     height: 193.33px;
 }
+}
+
+@media  screen and (min-width:768px) and (max-width:1028px) {
+    .section-e .contents {
+        display: block;
+    }
 }
